@@ -1,26 +1,29 @@
 * {
     box-sizing: border-box;
+    /* box-shadow: 0px 4px 4px 0px #03382f1c; */
 }
 
 body {
-    height: 100vh;
+    height: 100%;
     max-width: 1000px;
     margin: auto;
+    box-shadow: 0px 4px 4px 0px #03382f1c;
     background-color: whitesmoke;
 }
 
 /* Min header */
 header {
     display: flex;
-    height: 540px;
+    max-height: 540px;
+    position: relative;
 }
 
-.hand {
+.hand-img {
     object-fit: cover;
-    width: 500px;
+    width: 50%;
 }
 
-.hand-logo {
+.hand-logo-svg {
     display: flex;
     align-items: center;
     padding: 200px 0px 0px 130px;
@@ -35,14 +38,14 @@ header {
     width: 50%;
 }
 
-.seedling {
+.seedling-svg {
    width: 100%;
    height: 50%;
    padding: 30px 0px 0px 150px;
    background-color: #9e6d52;
 }
 
-.dig {
+.dig-svg {
     width: 100%;
     height: 50%;
     padding: 30px 0px 0px 150px;
@@ -70,7 +73,7 @@ nav {
     }
 }
 
-h1 {
+.main-title {
     display: flex;
     justify-content: center;
     
@@ -78,10 +81,153 @@ h1 {
     color: #0a846e;
 }
 
-/* Main-content */
-.grid-container {
+/* Main-content  */
+/* .grid-container {
     display: grid;
     grid-template-columns: repeat(12, 1fr); 
-    grid-template-rows: repeat(12, 1fr);
+    grid-template-rows: auto;
+    padding: 2rem;
+    row-gap: 20px;
+}  */
+
+/* Första section*/
+.grid-item1 {
+    display: grid;
+    grid-column: 1 / 13;
+    grid-row: 1 / 2;
+
 }
 
+.circle-container { 
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.circle {
+    height: 25rem;
+    width: 25rem;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    background-color: #0a846e;
+}
+
+.text-container {
+    flex: 1;
+    padding-left: 20px;
+    align-self: center; 
+    font-size: calc( 70% + 70%);
+}
+
+
+.button {
+    background-color: #0a846e; 
+    width: 10rem; 
+    height: 3rem;
+    border: none;
+    color: white;
+    border-radius: 8px; 
+    margin-left: 60%;
+}
+
+.horizontal-rule {
+    grid-column: 6 / 9;
+
+}
+
+/* Min andra section */
+.section-container {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: auto;
+    gap: 20px;
+   
+}
+
+.second-title {
+    display: flex;
+    justify-content: center;
+}
+
+.card-container {
+    width: 290px;  
+    height: 400px;
+    position: relative;
+    box-shadow: 0px 4px 4px 0px #03382f1c;
+}
+
+.card-img {
+    width: 290px;
+    height: 300px;
+    object-fit: cover; 
+}
+
+.card-svg {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.card-content {
+  display: flex;
+  justify-content: space-around;
+}
+
+.card-container button {
+    color: white;
+    background-color: #b93857;
+    border: none;
+    border-radius: 5px;
+    width: 5rem;
+}
+
+.footer-btn {
+    grid-column: 2/3;
+    place-self: center;
+}
+
+.footer-btn-style {
+    background-color: #0a846e;
+    border: none;
+    border-radius: 3px;
+    height: 2rem;
+    width: 6rem;
+    color: white;
+}
+
+/* Min tredje section */
+.container-2  {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.button-2 {
+    background-color: #0a846e; 
+    width: 50%; 
+    height: 4rem;
+    border: none;
+    color: white;
+    border-radius: 8px; 
+}
+
+/* Footer */
+.footer-content {
+    margin-top: 5rem;
+    position: relative;
+}
+
+.footer-img {
+    width: 100%;
+    height: 650px;
+    object-fit: cover;
+}
+
+.footer-svg {
+    position: absolute;
+    top: 30%;
+    right: 15%;
+
+}

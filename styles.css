@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    margin: 0;
 }
 
 body {
@@ -25,8 +26,9 @@ header {
 .hand-logo-svg {
     display: flex;
     align-items: center;
-    padding: 200px 0px 0px 130px;
-    
+    top: 50%;
+    left: 25%;
+    transform: translate(-50%, -50%);
     position: absolute;
 }  
 
@@ -39,14 +41,22 @@ header {
 }
 
 .seedling-svg {
-   height: 50%;
-   padding: 30px 0px 0px 150px;
+   height: 100%;
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
    background-color: #9e6d52;
 }
 
 .dig-svg {
-    height: 50%;
-    padding: 30px 0px 0px 150px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     background-color: #0a846e; 
 }
 
@@ -73,7 +83,8 @@ nav {
 .main-title {
     display: flex;
     justify-content: center;
-    
+    padding-top: 1rem;
+
     font-family: Arial, Helvetica, sans-serif;
     color: #0a846e;
 }
@@ -129,13 +140,33 @@ nav {
 .second-title {
     display: flex;
     justify-content: center;
+    align-items: center;
+    margin: 2rem;
 }
+
 
 .card-container {
     width: 290px;  
     height: 400px;
     position: relative;
     box-shadow: 0px 4px 4px 0px #03382f1c;
+}
+
+.card-content {
+    display: flex;
+    justify-content: space-around;
+    place-self: center;
+    height: 80px;
+  }
+  
+  .left-content > h3, p {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.right-content > h4, p {
+    margin-top: 10px;
+    margin-bottom: 20px;
 }
 
 .card-img {
@@ -149,11 +180,6 @@ nav {
     top: 35%;
     left: 50%;
     transform: translate(-50%, -50%);
-}
-
-.card-content {
-  display: flex;
-  justify-content: space-around;
 }
 
 .card-container button {
@@ -191,6 +217,7 @@ nav {
     border: none;
     color: white;
     border-radius: 8px; 
+    margin-top: 2rem;
 }
 
 /* Footer */
@@ -212,7 +239,7 @@ nav {
 
 }
 
-#footer-h2 {
+#footer-h3 {
     text-align: center;
     padding-bottom: 25px;
     font-family: sans-serif;
